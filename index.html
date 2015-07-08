@@ -8,44 +8,51 @@
 		</title>
 		
 		<script src="JS/dice.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+		<link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
 		
 	</head>
 	
 	<body>
 	
+	<div id="container">
+	
 	<header>
 		<h1>Bag O' Dice V 2.0</h1>
 	</header>
 	
-	<section id="diceSelection">
-		<fieldset>
-		
-			<h3>Choose your weapon?</h3>
-			<select id="diceSelector">
-				<option value="default">Select One</option>
-				<option value="4">D4</option>
-				<option value="6">D6</option>
-				<option value="8">D8</option>
-				<option value="10">D10</option>
-				<option value="12">D12</option>
-				<option value="20">D20</option>
-				<option value="100">D00</option>
-			</select>		
+		<section id="diceSelection">
+			<fieldset>
 			
-			<h3>How many?</h3>
-			<input type="text" id="diceMultiplier" />
+				<h3>Choose your weapon</h3>
+				<select id="diceSelector">
+					<option value="default">Select One</option>
+					<option value="4">D4</option>
+					<option value="6">D6</option>
+					<option value="8">D8</option>
+					<option value="10">D10</option>
+					<option value="12">D12</option>
+					<option value="20">D20</option>
+					<option value="100">D00</option>
+				</select>		
+				
+				<h3>How many?</h3>
+				<span id="multiplierAlert" class="alertText"></span>
+				<input type="text" id="diceMultiplier" />
+				
+				
+				<br /><br />
+				<input type="button" value="Roll Dice" onClick="rollDice()"/>
+				
+			</fieldset>
 			
-			<br /><br />
-			<input type="button" value="Roll Dice" onClick="rollDice()"/>
+			<div id="dice_output"><p>&nbsp;</p></div>
 			
-		</fieldset>
-		
-		<h3>Roll Values</h3>
-		<div id="dice_output"><p>&nbsp;</p></div>
-		<h3>Dice Total</h3>
-		<div id="dice_total"><p>&nbsp;</p></div>
-		
-	</section>
+			<div id="dice_total"><p>&nbsp;</p></div>
+			
+		</section>
+	
+	</div>
 		
 	</body>
 
